@@ -1,0 +1,69 @@
+\documentclass{fkssolpub}
+
+\usepackage[czech]{babel}
+\usepackage{fontspec}
+
+\usepackage{fkssugar}
+ 
+\author{Ondřej Sedláček}
+\school{Gymnázium Oty Pavla} 
+\series{2}
+\problem{2} 
+
+\begin{document} 
+
+\section{Úloha 1}
+
+Korekcí hygienických limitů je mnoho -- některé platí pro 2 m okolo
+obytných, nemocničních, vzdělávacích a rekreačních staveb, některé pro 
+jejich interiér. Například pro interiér vzdělávacích staveb je korekce pro
+hluk, s výjimkou hudby a řeči, oproti základnímu limitu pro interiér,
+který je $L_{Aeq} = 40 \text{dB}$, +5 dB.
+
+Avšak nejvýraznější kladná korekce, kterou jsem našel, je pro "starou hlukovou
+zátěž", neboli pro silnice a železnice, které byli postaveny před rokem 2000. 
+Pro ně je korekce v hluku 2 m okolo staveb kromě nemocnic, lázní a hospodářských 
+staveb oproti základnímu limitu $L_{Aeq} = 50 \text{dB}$ až +20 dB v denní době.
+
+\section{Úloha 2}
+
+Myslím si, že by se stát měl pokoušet o to, aby i staré dopravní cesty byly
+co nejméně hlučné. Proto bych limit pro "starou hlukovou zátěž" dával jedině
+na žádost o výjimku a jen na omezenou dobu, aby byl nějaký tlak k rekonstrukci.
+Přeci jenom je 70 dB hodně.
+
+\section{Problém 3}
+
+Pokud jsme si jistý, že hluk ze zdroje převyšuje hygienické limity, lze
+jít právnickou cestou. To však není optimální, protože asi nebudeme schopni
+určit, jestli to porušuje zákon, a daný zdroj hluku může mít z limitů výjimku
+(prostě byrokracie).
+
+Projektanti můžou používat takové materiály, které dobře izolují zvuk. Okna
+by měla mít různou šířku skel a měla by mezi nimi být široká mezera.
+Co se týče střech, nejlepší jsou pálené tašky. Podlaha také hraje roli, 
+některé materiály (třeba vinyl) jsou při chůzi hlučnější než
+ostatní. U konstrukce zdí se můžou rovnou použít dobře izolující materiály
+(třeba akustické cihly) nebo se přidá izolace (třeba minerální či polystyren). 
+Když ale nemáme to štěstí, lze izolace přidat do interiéru i dodatečně.
+
+\section{Problém 4}
+
+Abychom mohli vytvořit co největší hluk, musíme nějakým způsobem vytvořit
+velkou práci, která se přemění na akustickou energii. Na to pravděpodobně
+lidská síla stačit nebude. Ani gravitací si nepomůžeme (jedině, že bychom byli
+schopni odvrátit nějaký velký meteorit). Ale přece můžeme naráz vypustit
+velké množství energie za pomoci atomové bomby, např. car-bomby. 
+
+Avšak ve vzduchu existuje limit, kdy se bere zvuková vlna jako zvuková,
+a to v nulové nadmořské výšce 194 dB. Tehdy je akustický tlak tak vysoký,
+že mezi vlnami začne vznikat vakuum, proto u vyšších hodnot už je vlna spíš
+rázová. Proto ve vzduchu lze dosáhnout jen hladiny intenzity 194 dB, čehož zrovna 
+car-bomba dosáhla.
+
+Ve vodě je však možné dosáhnout ještě větší hladiny intenzity zvuku, což je
+hodně ovlivněno tím, že prahový akustický tlak v oceánu je nižší než na souši.
+Například u vorvaně bylo zaznamenáno až 230 dB. Proto, když odpálíme bombu pod
+vodou, mohli bychom dosáhnout větší hladiny intenzity.
+
+\end{document}

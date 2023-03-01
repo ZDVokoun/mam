@@ -1,0 +1,153 @@
+\documentclass{fkssolpub}
+
+\usepackage[czech]{babel}
+\usepackage{fontspec}
+
+\usepackage{fkssugar}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata,positioning}
+ 
+\author{Ondřej Sedláček}
+\school{Gymnázium Oty Pavla} 
+\series{1}
+\problem{3} 
+
+\begin{document} 
+
+\section{Problém 1}
+
+Aby bylo používání výtahu bezpečné, musí ještě sledovat, jestli mezi dveřmi
+není nějaký překážející objekt, také po zmáčknutí tlačítka musí čekat, nesmí 
+umožnit změnu směru uprostřed jízdy atd.
+
+\section{Problém 2}
+
+Výtah bude potřebovat senzory na vnímání polohy výtahy, zaznamenání
+objektu překážejícího před zavřením. Dále bude potřebovat dva páry tlačítek,
+jedny v patrech a druhé ve výtahu. Na dvojici tlačítek pro stejné patro stroj
+reaguje stejně.
+
+\begin{center}
+\begin{tikzpicture}[shorten >=1pt,node distance=4cm,on grid,auto]
+  \tikzstyle{every state}=[fill={rgb:black,1;white,10}]
+
+  \node[state,initial] (priz-otevr) {otevřeno v přízemí};
+  % \node[state] (rozhl-otevr) [below left of=priz-otevr] {otevřeno na rozhledně};
+  \node[state] (nahoru) [below left of=priz-otevr] {jede nahoru};
+  \node[state] (priz-zavir) [below right of=priz-otevr] {zavírá v přízemí};
+  \node[state] (rozhl-zavir) [below of=nahoru] {zavírá na rozhledně};
+  % \node[state] (nahoru) [below of=priz-zavir] {jede nahoru};
+  \node[state] (rozhl-otevr) [below of=priz-zavir] {otevřeno na rozhledně};
+  \node[state] (dolu) [below right of=rozhl-zavir] {jede dolů};
+
+  \path[->]
+  (priz-otevr) edge [bend left, align=center] node {1} (priz-zavir)
+  (priz-zavir) edge [bend left, align=center] node {2} (nahoru)
+               edge [bend left, align=center] node {3} (priz-otevr)
+  (nahoru) edge [bend right, align=center] node {4} (rozhl-otevr)
+           edge [loop above, align=center] node {5} ()
+  (rozhl-otevr) edge [bend left, align=center] node {6} (rozhl-zavir)
+  (rozhl-zavir) edge [bend right, align=center] node {7} (dolu)
+                edge [bend left, align=center] node {8} (rozhl-otevr)
+  (dolu) edge [bend left, align=center] node {9} (priz-otevr)
+         edge [loop below, align=center] node {10} ();
+
+\end{tikzpicture}
+\end{center}
+
+\subsection{Vysvětlivky}
+
+\begin{enumerate}
+  \item zmáčknuto tlačítko na rozhlednu / počkej  5s a zavři dveře v přízemí
+  \item dveře nezablokovány / jeď nahoru
+  \item dveře zablokovány \textbf{NEBO}  zmáčknuto tlačítko  k přízemí / otevři  dveře v přízemí 
+  \item dojel na rozhlednu / otevři dveře na rozhledně
+  \item zmáčknuto tlačítko na rozhlednu \textbf{NEBO} zmáčknuto  tlačítko k přízemí / jeď nahoru
+  \item zmáčknuto tlačítko k přízemí / počkej 5s a zavři dveře v přízemí
+  \item dveře nezablokovány / jeď dolů
+  \item dveře zablokovány \textbf{NEBO}  zmáčknuto tlačítko  na rozhlednu / otevři  dveře v přízemí
+  \item dojel k přízemí / otevři dveře v přízemí
+  \item zmáčknuto tlačítko na rozhlednu \textbf{NEBO} zmáčknuto  tlačítko k přízemí / jeď dolů
+\end{enumerate}
+
+\section{Úloha 3}
+
+Na funkčnost tohoto výtahu jsou potřeba čtyři páry tlačítek -- jeden z páru
+je ve výtahu a druhý se nachází v patře, do kterého výtah přivolává. Tento 
+Mealyho stroj se řídí podle fronty, kam při zmáčknutí tlačítka pro patro $n$
+se přidá číslo $n$. Stroj pak z ní číslo $n$ smaže, jakmile tam dorazí, nebo 
+když už tam je:
+
+\begin{tikzpicture}[shorten >=1pt,node distance=6cm,on grid,auto]
+  \tikzstyle{every state}=[fill={rgb:black,1;white,10}]
+  % \draw [help lines] (-1,1) grid (3,-1);
+
+  \node[state,initial] (otevreno) {otevřeno v $n$};
+  \node[state] (jede) [below right of=otevreno] {jede do $n$};
+  \node[state] (zavreno) [above right of=jede] {zavřeno};
+
+  \path[->]
+  % (otevreno) edge [loop above, align=center] node {ve frontě aktuální patro $n$ / otevřít \\ v $n$ patře a odstranit z fronty} ( )
+  %            edge [bend left, align=center] node {ve frontě jiné patro $n$ / zavření v aktuálním patře \\ a přesun do patra $n$ \\
+  %                                   \textbf{NEBO} \\
+  %                                   fronta prázdná / zavření v aktuálním patře} (zavreno)
+  % (zavreno) edge [loop right, align=center] node {ve frontě jiné patro $n$ / přesun do patra $n$} ( )
+  %           edge [bend left, align=center] node {dorazil do patra $n$ / otevřít v $n$ patře \\ a odstranit z fronty \\
+  %                                   \textbf{NEBO} \\
+  %                                   ve frontě aktuální patro $n$ / otevřít v $n$ patře a odstranit z fronty} (otevreno);
+
+  (otevreno) edge [loop above, align=center] node {ve frontě aktuální patro $n$ / otevřít \\ v $n$ patře a odstranit z fronty} ( )
+             edge [bend left, align=center] node {ve frontě jiné patro $n$ / zavření v aktuálním patře \\
+                                    \textbf{NEBO} \\
+                                    fronta prázdná / zavření v aktuálním patře} (zavreno)
+  (zavreno) edge [bend left, align=center] node {ve frontě jiné patro $n$ / přesun do patra $n$} (jede)
+            edge [bend left, align=center] node {ve frontě aktuální patro $n$ / otevřít v $n$ patře \\ a odstranit z fronty} (otevreno)
+            edge [loop right, align=center] node {fronta prázdná / zavřít \\ v patře $n$} ()
+  (jede) edge [bend left, align=center] node {dorazil do patra $n$ / otevřít \\ v $n$ patře a odstranit z fronty} (otevreno)
+         edge [loop below, align=center] node {} ();
+
+\end{tikzpicture}
+
+\section{Úloha 5}
+
+Abychom na žádný přechod nezapomněli, níže je tabulka všech 
+kombinací s údajem, který udává, jestli se při manuálním resetu
+změní konečný stav daného přechodu.
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    počáteční stav & koncentrace CO & konečný stav & jiný stav při manuálním resetu \\
+    \hline
+    klid & CO > 50 ppm & poplach & ne \\
+    poplach & CO > 50 ppm & poplach & ne \\
+    klid & CO < 5 ppm & klid & ne \\
+    poplach & CO < 5 ppm & klid & ne \\
+    klid & 5 ppm $\leq$ CO $\leq$ 50 ppm & klid & ne \\
+    poplach & 5ppm $\leq$ CO $\leq$ 50 ppm & poplach & ano \\
+    \hline
+  \end{tabular}
+\end{center}
+
+Teď můžeme dokreslit všechny potřebné přechody:
+
+
+\begin{tikzpicture}[shorten >=1pt,node distance=8cm,on grid,auto]
+  \tikzstyle{every state}=[fill={rgb:black,1;white,10}]
+
+  \node [state, initial] (klid) {klid};
+  \node [state] (poplach) [right of=klid] {poplach};
+
+  \path[->]
+  (klid) edge [bend left,align=center] node {CO: > 50 ppm / poplach = True} (poplach)
+         edge [loop below,align=center] node {CO: $\leq$ 50 ppm / poplach = False \\
+                                    \textbf{NEBO} \\
+                                   manuální reset / poplach = False} ()
+  (poplach) edge [bend left,align=center] node {CO: < 5 ppm / poplach = False \\
+                                    \textbf{NEBO} \\
+                                    manuální reset / poplach = False} (klid)
+            edge [loop above,align=center] node {CO: $\geq$ 5 ppm / poplach = True} ();
+\end{tikzpicture}
+
+\end{document}

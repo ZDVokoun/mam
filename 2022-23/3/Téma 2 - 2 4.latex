@@ -1,0 +1,140 @@
+\documentclass{fkssolpub}
+
+\usepackage[czech]{babel}
+\usepackage{fontspec}
+\usepackage{amssymb}
+
+\usepackage{fkssugar}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+ 
+\author{Ondřej Sedláček}
+\school{Gymnázium Oty Pavla} 
+\series{3}
+\problem{2} 
+
+\begin{document} 
+
+\section{Úloha 2}
+
+Pro výpočet jsem si vybral sluchátka JBL Tune 230NC TWS a potřebné informace
+na výpočet jsem bral ze stránky: 
+\url{https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw2507ba12/pdfs/JBL_Tune_230NCTWS_SpecSheet_USA_English.pdf}.
+
+Důležitý bude především tento údaj:
+
+\begin{displayquote}
+Sensitivity: 105dB SPL@1kHz 1mW
+\end{displayquote}
+
+Z ní víme ty nejdůležitější informace, ale budeme muset ještě odhadovat
+vzdálenost, ve který se to měřilo.
+
+Ale nejdříve musíme odvodit vzorec pro účinnost. Pro reproduktory můžeme určit
+účinnost jako poměr akustického výkonu ku elektrickému příkon:
+
+\[
+  \eta = \frac{P_a}{P_e}
+\]
+
+Protože příkon zjistíme z charakteristické citlivosti, musíme zjistit
+akustický výkon. Pro něj platí:
+
+\[
+  P_a = \frac{S p^2}{\rho c},
+\]
+
+kde $S$ je plocha, na kterou zvuk působí, $p$ je akustický tlak, $\rho$ je
+hustota média a $c$ je rychlost zvuku v médiu. Protože se všechna měření
+dělají ve vzduchu, $\rho = 1,2 \text{kg} \cdot \text{m}^{-3}$ a
+$c = 334 \text{m} \cdot \text{s}^{-1}$. Zvuk reproduktoru působí na plochu
+polokoule, proto $S = 2 \pi r^2$.
+
+Pro zjistění akustického tlaku musíme převést hladinu akustického
+tlaku na akustický tlak. To uděláme takto:
+
+\[
+  L_p = 20 \log \left( \frac{p}{p_0} \right) \ztoho
+    p = 10^{\frac{L_p}{20}} \cdot p_0
+\]
+
+Protože hodnotu $p_0 = 20 \text{\textmu Pa}$ známe, stačí nám to všechno jen
+dosadit do vzorce:
+
+\[
+  \eta = \frac{\frac{2 \pi r^2 \cdot 10^{\frac{L_p}{10}} \cdot p_0^2}{\rho c}}{P_e} =
+    \frac{2 \pi r^2 \cdot 10^{\frac{L_p}{10}} \cdot p_0^2}{P_e \rho c}
+\]
+
+Ještě ale musíme zjistit vzdálenost $r$. Protože se budou sluchátka testovat
+na umělých hlavách, budeme předpokládat, že vzdálenost bude rovna délce
+ušního kanálku, proto $r = 2,5 \text{cm}$. Teď už známe všechny údaje
+pro výpočet:
+
+\[
+  \eta = \frac{2 \pi \cdot (2,5 \cdot 10^{-2})^2 \cdot 10^{\frac{105}{10}} \cdot
+    (20 \cdot 10^{-6})^2}{1,2 \cdot 334 \cdot 10^{-3}} \doteq 0,12 = 12 \%
+\]
+
+Proto účinnost těchto sluchátek je $12\%$.
+
+\clearpage
+\section{Problém 4}
+
+Celkem jsem zanalyzoval účinnost 7 reproduktorů. Mezi nimi jsou sluchátka
+a špunty, bezdrátový i drátový, bezdrátové reproduktory a normální bedny.
+U každého reproduktoru jsem vzal její citlivost a z ní jsem za pomoci
+vzorečku z předchozí úlohy vypočítal účinnost. U sluchátek jsem bohužel
+musel jako v minulém cvičení odhadovat vzdálenost $r$, proto výsledná účinnost
+pravděpodobně nebude přesně odpovídat skutečnosti. U špuntů jsem uvažoval
+jen délku ušního kanálku a u sluchátek přes hlavu jsem ještě přidal centimetr
+navíc. Níže už jsou výsledky:
+
+\begin{table}[h!]
+  \caption{Účinnost různých druhů reproduktorů}
+  \label{tab:eff}
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|}
+      \hline
+        Model & Typ & $L_p$ [dB] & $r$ [m] & $P$ [W] & $\eta$ [\%] \\
+      \hline
+        \href{https://www.harmanaudio.in/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwd36fda61/pdfs/JBL_Tune_510BT_SpecSheet_English.pdf}{JBL TUNE 510BT} & Bluetooth přes hlavu & 103,5 & $3,5 \cdot 10^{-2}$ & $1,0 \cdot 10^{-3}$ & 17,19 \\
+        \href{https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw2507ba12/pdfs/JBL_Tune_230NCTWS_SpecSheet_USA_English.pdf}{JBL Tune 230NC TWS} & Bluetooth špunty & 105 & $2,5 \cdot 10^{-2}$ & $1,0 \cdot 10^{-3}$ & 12,39 \\
+        \href{https://www.marshallheadphones.com/cz/en/stanmore-ii-bluetooth.html}{Marshall Stanmore II} & Bluetooth reproduktor & 101 & 1 & 1 & 7,89 \\
+        \href{https://www.sony.com/electronics/support/wired-headphones-headband/mdr-zx110/specifications}{Sony MDR-ZX110} & Drátové přes hlavu & 98 & $3,5 \cdot 10^{-2}$ & $1,0 \cdot 10^{-3}$ & 4,84 \\
+        \href{https://mm.jbl.com/in-ear-headphones/JBL+T110.html}{JBL T110}  & Drátové špunty & 96 & $2,5 \cdot 10^{-2}$ & $1,0 \cdot 10^{-3}$ & 1,56 \\
+        \href{https://reprosoustavy-reproduktory.heureka.cz/magnat-monitor-supreme-102/#specifikace/}{Magnat Monitor Supreme 102} & Bedna & 89 & 1 & 1 & 0,5 \\
+        \href{https://reprosoustavy-reproduktory.heureka.cz/logitech-z200/#specifikace/}{Logitech Z200} & Bedna & 88 & 1 & 1 & 0,4  \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+Jak šlo očekávat, bezdrátové reproduktory mají nejvyšší účinnost. Nejvyšší účinnosti
+dosáhli bezdrátová sluchátka přes hlavu JBL TUNE 510BT, která dosáhla na
+reproduktory až podezřele vysokých 17,2 \%. Tohle možná bude způsobeno tím,
+že náš předpoklad, že $r = 3,5$ cm, je chybný, ale i přesto je jasné,
+tyto sluchátka jsou velmi účinná.
+
+Zároveň si můžeme všimnout toho jevu, že menší reproduktory jsou většinou 
+účinnější než třeba bedny. To lze jednoduše vysvětlit -- pro většinu lidí,
+kteří si kupují bedny, není účinnost priorita a narozdíl od beden je sluchátkám 
+většinou dodávána energie přes 3,5 mm jack z počítače či telefonu, což 
+omezuje velikost příkonu. Díky tomu se místo toho soustředí na kvalitu zvuku 
+a šířce frekvenčního rozmezí na úkor účinnosti. 
+
+Pokud se nezobrazují v tabulce linky na zdroje, jsou níže:
+
+\begin{enumerate}
+ \item JBL TUNE 510BT -- \url{https://www.harmanaudio.in/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwd36fda61/pdfs/JBL_Tune_510BT_SpecSheet_English.pdf} 
+ \item JBL Tune 230NC TWS -- \url{https://www.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw2507ba12/pdfs/JBL_Tune_230NCTWS_SpecSheet_USA_English.pdf} 
+ \item Marshall Stanmore II -- \url{https://www.marshallheadphones.com/cz/en/stanmore-ii-bluetooth.html} 
+ \item Sony MDR-ZX110 -- \url{https://www.sony.com/electronics/support/wired-headphones-headband/mdr-zx110/specifications} 
+ \item JBL T110 -- \url{https://mm.jbl.com/in-ear-headphones/JBL+T110.html}  
+ \item Magnat Monitor Supreme 102 -- \url{https://reprosoustavy-reproduktory.heureka.cz/magnat-monitor-supreme-102/#specifikace/} 
+ \item Logitech Z200 -- \url{https://reprosoustavy-reproduktory.heureka.cz/logitech-z200/#specifikace/} 
+\end{enumerate}
+
+\end{document}

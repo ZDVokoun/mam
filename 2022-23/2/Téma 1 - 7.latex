@@ -1,0 +1,103 @@
+\documentclass{fkssolpub}
+
+\usepackage[czech]{babel}
+\usepackage{fontspec}
+
+\usepackage{fkssugar}
+ 
+\author{Ondřej Sedláček}
+\school{Gymnázium Oty Pavla} 
+\series{1}
+\problem{7} 
+
+\begin{document} 
+
+\section{Úloha 7}
+
+$\exists$, $\not\exists$ král
+
+Byl, nebyl jeden stát, jemuž vládl jeden vůdce. Ten byl velmi mocný,
+avšak i zlý a velmi krutý. Jednou za ním přišel jeho rádce, řka:
+
+"Nejvyšší fíra, už jsme porazili všechny až na jedinou zemi -- na
+ty prcky víly. Ano, jen kvuli těm smradům. Chce to pořádný fajty,
+ale před tim musime zjistit, jak moc jsou silni. Proto vyhlaš, ať každej, 
+kdo má ňáké info, je pěkně nám vyklopí, nebo chcípne s celou svou
+rodinou."
+
+Vůdce se na okamžení zamyslel, pak povelil:
+
+"OK, provedu. Odchod!"
+
+Avšak velmi daleko na venkově o tom Vendelín neměl ani potuchy. Ten
+měl úplně jiné starosti.
+
+"Vendelínku, už moc stará a slabá jsem a ty's mladý a plný síly. Nejsem
+schopna se o tebe víc postarat. Vezmi si, co potřebuješ, a vyraž do
+světa."
+
+Když už byl na odchodu, řekla mu ještě:
+
+"Ještě tu máš buchty, abys neměl hlad."
+
+"Děkuji, maminko." děl a kráčel přímo za nosem.
+
+Několik dní a nocí procházel světem a hledal místo k žití. Jednou ale
+dorazil k černému a hustě zarostlému lesu. Vendelína najednou chytla 
+zvědavost a protože si neuvědomil nebezpečí jeho činu, pokusil se 
+tím lesem projít. Protože neměl sebou nic ostrého kromě rybičky, šlo
+mu projít jen stěží. Po noci stráveném prolízáním se však celý 
+poškrábaný a od krve objevil na druhé straně.
+
+Tento typ krajiny ještě nikdy v životě neviděl. Bylo ještě brzo ráno,
+tudíž mohl vidět v dáli mnoho bílých světýlek z domovů. Byli slyšet
+zvuky tekoucí vody, cvrčků, malých ptáčků. A viděl skoro jako za bílé
+noci -- slabě bíle svítila voda, světlušky, stromy a kořeny slabě 
+zeleně.
+
+Když najednou ucítil na spánku úder a spadl na zem. Chvíli nic neviděl,
+jen nějaké bílé světlo. Pak se vzpamatoval a uviděl před sebou krásnou
+malou dívku s malými křídly, vílu.
+
+S překvapeným výrazem a rukou připravenou k útoku na něj hleděla.
+Když si prohlídla jeho celé tělo, zjistila, že je bezbranný. V tom
+se na jejím obličeji objevil starostlivý výraz.
+
+"Odpusť mi. Jsem Sofie. Ztratil ses?"
+
+On na ni zmateně hleděl. Je to sen? Vůbec nevěřil svým očím. A taky
+nerozuměl ani slovu, což víle brzy došlo a naznačila mu, ať čeká.
+
+Přilítla potom s jednou velkou knihou a podala mu ji. Byla to učebnice.
+Přestože jediné, co četl, byly knihy pro děti, dokázal pak složit
+větu.
+
+"Jsem Vendelín."
+
+To ji očividně pobavilo a on se díval na její krásný úsměv. Pak
+si všimla svítajícího slunce a zděsila se.
+
+"Musíš rychle jít, Vendelíne. Večer se zase vrať. Budu čekat," a 
+odletěla.
+
+Když se vrátil zpět do lidského světa, bylo mu jasné, že když
+nemůže žít ve vílím světě, zůstane alespoň u hranic. Našel si práci u
+sedláka a ve volném čase se učil vznešené řeči víl.
+
+Jednou však musel jít do města, aby koupil nové náčiní. Když se vracel, 
+všiml si jedné cedule červené, jež dila: 
+
+\textit{"Dle nařízení nejvyššího vládce musí všichni veškere info vo
+vílách vyklopit, nebo chcípne s celou svou rodinou!! Spolupracovníka
+čeká štědrá odměna."}
+
+Protože Vendelín věděl od maminky, že vládci nikdy nemají dobré úmysly,
+běžel co nejrychleji do světa víl, aby ji upozornil:
+
+"Sofie, musím ti něco říct," řekl a vzal ji za ruku. "Vládce lidského
+světa chce po lidech, aby mu řekli vše o vílách, jinak budou zabiti."
+Víla si uvědomila, oč tu běží. Hrozí válka.
+
+
+
+\end{document}

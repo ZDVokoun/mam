@@ -1,0 +1,214 @@
+\documentclass{fkssolpub}
+
+\usepackage[czech]{babel}
+\usepackage{fontspec}
+\usepackage{fkssugar}
+
+\newcommand{\ceq}{\stackrel{C}{=}}
+
+\author{Ondřej Sedláček}
+\school{Gymnázium Oty Pavla} 
+\series{4}
+\problem{4} 
+
+\begin{document} 
+
+\section{Úloha 1}
+
+U prvního výrazu použijeme vzorec pro konstantu. Při jeho použití vyjde:
+
+\[
+  \int 42 \,dx \stackrel{C}{=} 42x
+\]
+
+U dalšího použijeme vzorec pro součet a pak pro $\sin x$ a 
+$\frac{1}{\cos^2 x}$:
+
+\[
+  \int 5 \sin x + \frac{6}{\cos^2 x} \, dx = 5 \int \sin x \, dx 
+    + 6 \int \frac{1}{\cos^2 x} \, dx \stackrel{C}{=} -5 \cos x + 6 \tan x
+\]
+
+V následujícím použijeme vzorec pro mocniny. Musíme si však dát pozor
+na konstanty:
+
+\[
+  \int \int 6x \, dx \, dx = \int 3x^2 + C \, dx \stackrel{C}{=}
+    x^3 + Cx
+\]
+
+Teď jdeme na určité integrály. Ty budu řešit jejich obecným vyřešením a
+následným dosazením do definice.
+
+V prvním použijeme vzorec pro mocninu:
+
+\[
+  \int x \, dx \ceq \frac{1}{2}x^2
+\]
+\[
+  \int_0^1 x \, dx = \frac{1}{2} \cdot 1^2 + \frac{1}{2} \cdot 0^2
+    = \frac{1}{2}
+\]
+
+V druhém použijeme vzorec pro $\sin x$:
+
+\[
+  \int \sin x \, dx \ceq -\cos x
+\]
+\[
+  \int_0^2\pi = -\cos 2\pi + \cos 0 = 0
+\]
+
+V posledním použijeme vzorec, jehož výsledek je $\arcsin x$:
+
+\[
+  \int \frac{1}{\sqrt{1 - x^2}} \, dx \ceq \arcsin x
+\]
+\[
+  \int_0^1 \frac{1}{\sqrt{1 - x^2}} \, dx = \arcsin 1 - \arcsin 0
+    = \frac{\pi}{2}
+\]
+
+\section{Úloha 2}
+
+Nejdříve odvodíme vzorce pro velikost okamžité rychlosti
+$v$ a uraženou vzdálenost pro volný pád $s$:
+
+\[
+  v = \int g \, dt \ceq gt
+\]
+
+\[
+  s = \int gt \, dt \ceq \frac{1}{2}g t^2
+\]
+
+Protože známe uraženou vzdálenost $s$, můžeme ze vzorce
+pro uraženou vzdálenost vypočítat čas volného pádu $t$:
+
+\[
+  s = \frac{1}{2} g t^2 \ztoho t = \sqrt{\frac{2s}{g}}
+\]
+\[
+  t = \sqrt{\frac{2 \cdot 58,7}{9,81}} \doteq 3,46 \, \text{s}
+\]
+
+Ještě vypočítáme velikost rychlosti $v$ a máme hotovo:
+
+\[
+  v = \int_0^t g \, dt = gt = g \cdot \sqrt{\frac{2s}{g}} 
+    = \sqrt{2sg} = \sqrt{2 \cdot 9,81 \cdot 58,7} 
+    = 33,94 \, \text{m} \cdot \text{s}^{-1}
+\]
+
+\section{Úloha 3}
+
+Nejprve výraz upravíme tak, abychom mohli aplikovat vzorec pro složenou
+funkci:
+
+\[
+  \int \frac{1}{e^x} \, dx = \int e^{-x} \, dx = - \int e^{-x} \cdot (-1) \, dx
+\]
+
+Z tohoto tvaru můžeme odvodit, že vnější funkce $F(x) = e^x$ a vnitřní funkce
+$G(x) = -x$. Díky tomu lze výraz vyjádřit jako:
+
+\[
+  - \int e^{-x} \cdot (-1) \, dx \ceq -e^{-x}
+\]
+
+U druhého výrazu budeme muset pro obecné vyjádření také provést menší úpravy:
+
+\[
+  \int xe^{-x^2} \, dx = -\frac{1}{2} \cdot \int (-2) xe^{-x^2} \, dx
+\]
+
+Zde použijeme pak stejný postup:
+
+\[
+  -\frac{1}{2} \cdot \int (-2) xe^{-x^2} \, dx \ceq -\frac{1}{2} e^{-x^2}
+\]
+
+Teď můžeme zjistit výsledek určitého integrálu:
+
+\[
+  \int_0^2 xe^{-x^2} \, dx = -\frac{1}{2} e^{-2^2} + \frac{1}{2} e^{0^2}
+    = \frac{1 - e^{-4}}{2} = \frac{1}{2} - \frac{1}{2e^{4}} \doteq 0,49
+\]
+
+\section{Úloha 4}
+
+Na první výraz můžeme krásně použít integraci per partes. Zde je nejlepší
+dosadit funkce jako $f(x) = e^x$ a $G(x) = x$. Tím nám vyjde:
+
+\[
+  \int x \cdot e^x \, dx = x \cdot e^x - \int e^x \cdot 1 \, dx \ceq e^x (x - 1)
+\]
+
+U druhé využijeme nápovědy a dosadíme $f(x) = 1$ a $G(x) = \ln x$:
+
+\[
+  \int \ln x \, dx = x \ln x - \int x \cdot \frac{1}{x} \ceq x (\ln x - 1)
+\]
+
+U posledního nejdříve musíme využít vzorce $sin^2 x + cos^2 x = 1$, díky níž
+spolu s jednou integrací per partes dostaneme rovnost, ze které už lze odvodit
+vyjádření integrálu:
+
+\[
+  \int \cos^2 x \, dx = \int 1 \, dx - \int \sin^2 x \, dx
+    = \int 1 \, dx + \sin x \cos x - \int \cos^2 x \, dx 
+\]
+
+\[
+  2 \int \cos^2 x \, dx \ceq x + \sin x \cos x
+\]
+
+\[
+  \int \cos^2 x \, dx \ceq \frac{x + \sin x \cos x}{2}
+\]
+
+\section{Úloha 6}
+
+Snad příliš nevadí, že řeším úlohu ze svého článku.
+Jestli se Vám bude zdát, že se tímto zvýhodňuji, budu
+v pořádku s tím, že tuto úlohu nebudu mít obodovanou.
+Teď ale už jdeme na řešení.
+
+Zde nejdříve musíme vyjádřit funkci obvodu závidlou 
+na jedné proměnné $f(x)$. Protože známe plochu, můžeme
+vyjádřit jednu ze stran pomocí vzorce $S = ab$. Vyjádřením
+dostaneme vztah $b = \frac{S}{a} = \frac{800}{a}$. Obvod
+plotu v tomto případě bude $o = 2a + b$. Teď už jsme
+konečně schopni vyjádřit funkci obvodu:
+
+\[
+  f(x) = 2 x + \frac{800}{x} 
+    = 2 \left( x + \frac{400}{x} \right)
+\]
+
+Následně musíme tuto funkci zderivovat:
+
+\[
+  f'(x) = 2 \left( x + \frac{400}{x} \right)'
+    = 2 + 2 \frac{0 - 400}{x^2} = 2 - \frac{800}{x^2}
+\]
+
+Protože funkce $f(x)$ je kvadratická, jejíž parametr $a$
+je kladné číslo, má tato funkce jediný extrém, která je
+jejím globálním minimem. Proto funkce $f(x)$ dosáhne
+minima, když:
+
+\[
+  2 - \frac{800}{x^2} = 0 \ztoho x = \sqrt{400} = 20
+\]
+
+Teď už můžeme dopočítat rozměry oplocení:
+
+\[
+  a = 20 \, \text{m}
+\]
+\[
+  b = \frac{800}{a} = \frac{800}{20} = 40 \, \text{m}
+\]
+
+\end{document}

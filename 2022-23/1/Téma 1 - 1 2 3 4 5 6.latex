@@ -1,0 +1,113 @@
+\documentclass{fkssolpub}
+
+\usepackage[czech]{babel}
+\usepackage{fontspec}
+
+\usepackage{fkssugar}
+ 
+\author{Ondřej Sedláček}
+\school{Gymnázium Oty Pavla} 
+\series{1}
+\problem{1} 
+
+\begin{document} 
+
+\section{Úloha 1}
+
+Jedinou možnou zmínkou o železu je reálné číslo ž. Protože výrok, 
+ve kterém se reálné číslo ž nachází, není zcela ideální na práci, 
+převedl jsem ho do následujícího tvaru:
+
+\begin{equation}
+  \label{eq:kletba}
+  \forall \text{ž} \in \mathbb{R}^+ : 
+    \text{vzdálenost}_{\text{meč od osoby}} > \text{ž} \land 
+    \text{kletba}_{\text{meč}} \not\subset \text{budoucnost}_{\text{osoba}}
+\end{equation}
+
+Z tohoto výroku vyplívá, že pokud je osoba dál než reálné číslo ž,
+nebude proklet. Tudíž pokud reálné číslo ž označuje množství železa,
+pak by množství železa určovalo vzdálenost, na kterou Honzovi nehrozí
+prokletí. Tudíž je možnost, že meč je ze železa.
+
+Za kov bych pravděpodobně doporučil bronz, jedná se totiž o nejlepší
+náhradu za železo. Je měkčí, ale stále tvrdší než měď nebo zlato.
+
+\section{Úloha 2}
+
+Pokud je zde myšlen negací operátor negace, pak v pohádce se 
+nachází pouze dva výroky obsahující negace:
+\begin{equation}
+  \label{eq:1}
+  \{h \in \text{hlavy} : h  \lnot \text{upadla} \} = \emptyset \implies \text{drak } \lnot \text{živý}
+\end{equation}
+
+\begin{equation}
+  \label{eq:2}
+  \lnot \exists h \in \text{hlavy} : h  \lnot \text{upadla}
+\end{equation}
+
+Výrok \ref{eq:1} se nabízejí dva způsoby. U jednoho prostě zaměníme
+slova tak, že nebude potřeba používat operátor negace, u druhého
+budeme muset výrok trochu přepsat.
+
+Při prvním způsobu zaměníme $\lnot \text{upadla}$ za drží a $\lnot \text{živý}$
+za mrtvý:
+
+\[
+  \{h \in \text{hlavy} : h \text{ drží} \} = \emptyset \implies \text{drak mrtvý}
+\]
+
+Při druhém způsobu vyzní výrok jinak než původně, ale hodnoty bude vracet stejné:
+
+\[
+  |\{h \in \text{hlavy} : h \text{ upadla} \}| \neq 7 \implies \text{drak živý}
+\]
+
+Výrok \ref{eq:2} převedeme jednodušeji, a to následujícím způsobem:
+
+\[
+  \forall h \in \text{hlavy} : h \text{ upadla}
+\]
+
+
+\section{Úloha 3}
+
+Na meči stojí:
+
+\begin{center}
+  \textit{Pro všechny osoby v království platí, že pokud je jejich budoucnost mečem prokleta, 
+budou mít smůlu.}
+
+  \textit{Neexistuje kladné reálné číslo ž, pro které platí, že pokud  
+vzdálenost meče od osoby je větší než číslo ž, bude osoba mečem prokleta.}
+\end{center}
+
+\section{Úloha 4}
+
+Zde jsem narazil na problém s výroky na meči, protože jediné, co říkají, je to, že
+když je člověk proklet, bude mít smůlu, a pokud bude Honza bude od meče dál než je 
+velikost kladného reálného čísla ž, nebude proklet. Tudíž můžeme jen spekulovat 
+jestli bude Honza proklet či ne.
+
+Pokud by nebyl proklet, pak se ožení s princeznou a stane se králem. Pokud však bude
+proklet, pak kdykoliv se mu může něco nemilého stát (např. při návratu zpět zakopne
+na hraně útesu a sletí ze skály).
+% Vypadalo to, že bude svatba s princeznou a Honza se stane králem, avšak přišla na 
+% něj smůla způsobena prokletým mečem, při svatebním obřadu se přepadl přes okno, 
+% když se díval do ulic, a zemřel na zranění z pádu.
+
+\section{Úloha 5}
+
+Z textu vyplívá, že Honza je nejhloupější muž v království, protože z jednoho výroku 
+vyplívá, že není jiným mužem v království, který má menší nebo stejně velký mozek jako
+Honza.
+
+\section{Úloha 6}
+
+Draka lze zabít tak, že mu všechny hlavy upadnou. A zařídit, aby hlava upadla, lze tak, 
+že do něj někdo sekne mečem, čímž, jak v textu napsáno, nebude průnik hlavy a meče prázdná
+množina. Tudíž se musí do každé jednotlivé hlavy draka seknout mečem, aby umřel.
+
+
+\end{document}

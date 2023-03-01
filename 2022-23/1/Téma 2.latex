@@ -1,0 +1,163 @@
+\documentclass{fkssolpub}
+
+\usepackage[czech]{babel}
+\usepackage{fontspec}
+
+\usepackage{fkssugar}
+ 
+\author{Ondřej Sedláček}
+\school{Gymnázium Oty Pavla} 
+\series{1}
+\problem{2} 
+
+\begin{document} 
+
+\section{Úloha 1}
+
+Experiment jsem prováděl ve svém pokoji, kde, když jsem nic nepoustěl, 
+bylo něco málo pod 30 dB. Jako reproduktor jsem použil JBL Charge 3,
+který ale špatně hraje nízké tóny, a na vytvoření uzavřeného prostoru
+jsem použil ručník a malou kartónovou krabici.
+
+Postup byl následující. Pro každý tón s frekvencemi od 55 Hz, 110 Hz až
+po 3520 Hz jsem nejdříve změřil jejich hlasitost bez izolace, pak jsem
+pro stejné tóny měřil hlasitost, když byl reproduktor zabalen do ručníku
+a vložen do krabice. 
+
+Ale otázkou zůstává, jak vypočítáme ten koeficient absorpce. Známe tyto
+vztahy:
+
+\[
+  k = \frac{I_{\text{absorbováno}}}{I_{\text{celková}}}
+\]
+\[
+  L = 10 \times \log{\frac{I}{I_0}}
+\]
+
+Při odvozování intenzity $I$ využiji toho, že $I_0$ je konstanta,
+tudíž při dosazení do prvního vzorce neovlivní výsledek:
+
+\[
+  L = 10 \times \log{\frac{I}{I_0}}
+\]
+\[
+  \log{\frac{I}{I_0}} = \frac{L}{10}
+\]
+\[
+  \frac{I}{I_0} = 10^{\frac{L}{10}}
+\]
+
+Označím-li hladinu intenzity bez izolace $L_1$ a hladinu intenzity 
+s izolací $L_2$, dostaneme pro $k$ tento vzorec:
+
+\[
+  k = \frac{10^{\frac{L_1}{10}} - 10^{\frac{L_2}{10}}}{10^{\frac{L_1}{10}}}
+\]
+
+Zde jsou výsledky dvou měření, kdy u druhé jsem měl zapnutou vyšší
+hlasitost:
+
+\begin{table}[h!]
+  \caption{Výsledky prvního měření}
+  \label{tab:1}
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      Číslování & $f$ & $L_1$ & $L_2$ & $k$ \\
+      \hline
+      1 & 55 & 38 & 38 & 0 \\
+      2 & 110 & 60 & 58 & 0.369042655519807 \\
+      3 & 220 & 61 & 59 & 0.369042655519806 \\
+      4 & 440 & 66 & 60 & 0.748811356849042 \\
+      5 & 880 & 63 & 54 & 0.874107458820583 \\
+      6 & 1760 & 57 & 40 & 0.980047376850311 \\
+      7 & 3520 & 50 & 30 & 0.99 \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[h!]
+  \caption{Výsledky druhého měření}
+  \label{tab:2}
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      Číslování & $f$ & $L_1$ & $L_2$ & $k$ \\
+      \hline
+      1 & 55 & 44 & 39 & 0.683772233983162 \\
+      2 & 110 & 64 & 58 & 0.748811356849042 \\
+      3 & 220 & 71 & 59 & 0.936904265551981 \\
+      4 & 440 & 70 & 53 & 0.980047376850311 \\
+      5 & 880 & 71 & 54 & 0.980047376850311 \\
+      6 & 1760 & 65 & 43 & 0.993690426555198 \\
+      7 & 3520 & 58 & 32 & 0.99748811356849 \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+Pro zprůměrované výsledky viz tabulku \ref{tab:cel}.
+
+\begin{table}[h!]
+  \caption{Zprůměrování výsledků}
+  \label{tab:cel}
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      Číslování & $f$ & $k_1$ & $k_2$ & $\prumer k$ \\
+      \hline
+        1 & 55 & 0 & 0.683772233983162 & 0.341886116991581 \\
+        2 & 110 & 0.369042655519807 & 0.748811356849042 & 0.558927006184425 \\
+        3 & 220 & 0.369042655519806 & 0.936904265551981 & 0.652973460535893 \\
+        4 & 440 & 0.748811356849042 & 0.980047376850311 & 0.864429366849677 \\
+        5 & 880 & 0.874107458820583 & 0.980047376850311 & 0.927077417835447 \\
+        6 & 1760 & 0.980047376850311 & 0.993690426555198 & 0.986868901702755 \\
+        7 & 3520 & 0.99 & 0.99748811356849 & 0.993744056784245 \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+Na měření ale nalézám dvě zvláštnosti, a to že se naměřená absorpce mění
+tolik s rostoucí hlasitostí a také že ten koeficient je takhle velký.
+To první dokážu vysvětlit jen tím, že při nižší hlasitosti se více promítá
+hluk prostředí, tudíž to ty výsledky zmátlo. A to druhé se vysvětluje tím,
+že intenzita roste vůči hladiny intenzity exponenciálně.
+
+\section{Problém 2}
+
+Změnou prostředí bychom mohli dojít k jiným výsledkům díky jinému množství
+hluku nebo díky menšímu množství odražených vln, které můžou zvuk zesilovat
+a tím teoreticky zkreslit výsledky. Výsledky taky může ovlivňovat technika,
+například chytrý telefon nemusel přesně vyhodnotit hladinu intenzity, nebo
+reproduktor špatně hrál určité rozmezí tónů. Též mohlo dojít k softwarové
+chybě. Výsledky mohli ovlivnit také způsob izolování reproduktoru nebo
+hlasitost reproduktoru.
+
+\section{Úloha 3}
+
+Protože musíme sečíst intenzity a ne hladinu intenzit, musíme nejdříve získat
+intenzitu z hladiny intenzity:
+
+\[
+  L = 10 \times \log{\frac{I}{I_0}} \ztoho \frac{I}{I_0} = 10^{\frac{L}{10}}
+\]
+
+Tohle nám stačí znát, abychom mohli vypočítat hladinu intenzity zvuku dvou vysavačů:
+
+\[
+  L = 10 \times \log{2 \times 10^{\frac{L}{10}}} = 10 \times \log{2 \times 10^7}
+    = 73.01 dB
+\]
+
+\section{Úloha 4}
+
+Hluk bych definoval jako jakýkoli zvuk, který je nám nežádoucí. Do toho zcela jistě
+zapadá veškeré bolestivé zvuky. Nebo třeba zvuky, které odvádějí pozornost, jako
+hlas rušícího kolegy, notifikace, hluk z ulice, plačící dítě, zvuk vrtačky nebo
+dupání. 
+
+
+\end{document}

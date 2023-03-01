@@ -1,0 +1,33 @@
+\documentclass{fkssolpub}
+
+\usepackage[czech]{babel}
+\usepackage{fontspec}
+\usepackage{fkssugar}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\author{Ondřej Sedláček}
+\school{Gymnázium Oty Pavla} 
+\series{4}
+\problem{2} 
+
+\begin{document} 
+
+\section{Problém 1}
+
+Jako první nejjednodušší způsob izolace schodiště v bytových domech je
+pomocí jeho umístění, protože samozřejmě tím se omezuje hluk vzduchem.
+Pro vzduchovou izolaci zároveň pomáhá fakt, že schodiště musí mít
+požární dveře, což také zvyšuje izolaci. Na kroječový hluk je však 
+tento typ izolace nedostatečný.
+
+U schodišť se samozřejmě nabízí na stupních a podestech dát plovoucí podlahu.
+Tímto způsobem zamezíme mnohému kročejovému hluku. Zároveň, pokud jsou pod
+schodištěm obyvatelné prostory, přidává se navíc naspod ramen izolační vrstva.
+
+Avšak v bytových domech se většinou používá jiný způsob. Nemůžeme mít
+levitující schodiště (bohužel), ale existují ložiska, které spojují ramena,
+podesty, stěny nebo základovou desku a zároveň izolují kročejový zvuk.
+Tento způsob je nejčastější pro splnění předpisů.
+
+\end{document}

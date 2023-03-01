@@ -1,0 +1,46 @@
+\documentclass{fkssolpub}
+
+\usepackage[czech]{babel}
+\usepackage{fontspec}
+\usepackage{fkssugar}
+\usepackage{amsfonts}
+
+\author{Ondřej Sedláček}
+\school{Gymnázium Oty Pavla} 
+\series{4}
+\problem{3} 
+
+\begin{document} 
+
+\section{Úloha 1}
+
+Nejprve si musíme uvědomit, že počáteční a konečná rychlost musí být nulová a
+že pro dosažení minimálního času $t$ (nebo co nejvyšší průměrné rychlosti)
+musíme co nejvíce zrychlovat. Abychom splnili obě tyto podmínky, musí výtah
+v první polovině zrychlovat se zrychlením $a$ a v druhé polovině
+zpomalovat se zrychlením $a$, tudíž při zrychlování a při zpomalování urazí
+výtah stejnou vzdálenost. Z toho získáme rovnici:
+
+\[
+  \frac{n}{2} = \frac{1}{2} a t^2
+\]
+
+Po úpravě získáme čas $t$ (zároveň protože známe přesné jednotky velčin
+$n$ a $a$, zapíšu za výsledkem jednotky):
+
+\[
+  n = a t^2 \ztoho t = \sqrt{\frac{n}{a}} \, \text{s}
+\]
+
+A protože maximální rychlost je $v = a t$, jsme schopni zjistit
+i ji:
+
+\[
+  v = a t = a \sqrt{\frac{n}{a}} = a \frac{\sqrt{n}}{\sqrt{a}}
+    = \sqrt{n a} \, \text{patro} \cdot \text{s}^{-1}
+\]
+
+Tím jsme u konce.
+
+
+\end{document}

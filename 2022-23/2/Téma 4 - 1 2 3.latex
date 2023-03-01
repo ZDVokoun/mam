@@ -1,0 +1,131 @@
+\documentclass{fkssolpub}
+
+\usepackage[czech]{babel}
+\usepackage{fontspec}
+
+\usepackage{fkssugar}
+
+% \usepackage{tikz}
+\usepackage{pgfplots}
+ 
+\author{Ondřej Sedláček}
+\school{Gymnázium Oty Pavla} 
+\series{2}
+\problem{4} 
+
+\begin{document} 
+
+\section{Úloha 1}
+
+\begin{equation}
+  \label{eq:1}
+  (x^2 - 4x + 4)' = (x^2)' - (4x)' + (4)' = 2x - 4 = 2 \cdot (x - 2)
+\end{equation}
+
+\begin{equation}
+  \label{eq:2}
+  (x^3 - 6x^2 + 12x - 8)' = (x^3)' - (6x^2)' + (12x)' - (8)'
+   = 3x^2 - 6 \cdot 2x + 12 = 3 \cdot (x^2 - 4x + 4)
+\end{equation}
+
+\begin{equation}
+  \label{eq:3}
+  (2 \sin{x} \cos{x})' = 2 \cdot (\sin{x} \cos{x})' 
+   = 2 \cdot ((\sin{x})' \cdot \cos{x} + \sin{x} \cdot (\cos{x})')
+   = 2 \cdot (\cos^2 x - \sin^2 x) = 2 \cdot \cos{2x}
+\end{equation}
+
+
+\section{Úloha 2}
+
+U funkce \ref{eq:1} je toto jednoduché, protože její derivace je 
+prostou lineární rovnici, která protíná osu x jen v jediném bodě,
+neboli hodnota $x$, která vynuluje $y$, což je $x = 2$. A protože 
+tato funkce je rostoucí (koeficient $a$ je kladný),
+funkce \ref{eq:1} roste v intervalu $\langle 2;+\infty)$ a klesá v 
+intervalu $(-\infty;2 \rangle$.
+
+Derivace funkce \ref{eq:2} je funkcí kvadratickou, tudíž budeme muset
+zjistit její kořeny. V tomto případě nebude potřeba použít diskriminant,
+použijeme místo něj vzorec pro umocněný rozdíl:
+
+\[
+  3 \cdot (x^2 - 4x + 4) = 3 (x - 2)^2
+\]
+
+Jak lze vidět, jedná se o kvadratickou funkci s dvojnásobným kořenem, tudíž
+funkce \ref{eq:2} musí růst neustále.
+
+Teď nám zbývá jen funkce \ref{eq:3}. Protože se jedná o periodickou
+funkci, budu určovat interval klesání s ohledem na $k \in \mathbb{Z}$.
+
+Abychom určili chování derivace, níže je tabulka:
+
+\begin{table}[h]
+  \caption{Tabulka hodnot derivace}
+  \label{tab:1}
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      $x$ & $0$ & $\frac{\pi}{4}$ & $\frac{\pi}{2}$ & $\frac{3\pi}{4}$ \\
+      \hline
+      $2 \cdot \cos{2x}$ & $2$ & $0$ & $-2$ & $0$ \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+Z této tabulky lze vidět, že v intervalu $\langle 0; \pi \rangle$ klesá
+funkce \ref{eq:3} v intervalu $\langle \frac{\pi}{4}; \frac{3\pi}{4} \rangle$ 
+a roste v intervalu $\langle 0; \frac{\pi}{4} \rangle 
+\cup \langle \frac{3\pi}{4}; \pi \rangle$. Tohle, když zobecníme, vyjde nám,
+že funkce \ref{eq:3} roste v intervalu $\langle -\frac{\pi}{4} + k\pi; \frac{\pi}{4} + k\pi \rangle$
+a klesá v intervalu $\langle \frac{\pi}{4} + k\pi; \frac{3\pi}{4} + k\pi \rangle$
+
+\begin{tikzpicture}
+  \begin{axis} [
+    axis lines=center,
+    xtick distance=2.0,
+    ymax=5,
+    ymin=-5,
+    xmax=5,
+    xmin=-5,
+    domain=-5:5,
+    legend cell align={left},
+    legend pos=north west
+  ]
+    \addplot [blue,smooth,thick] { x^2 - 4*x + 4 };
+    \addplot [red,smooth,thick] { x^3 - 6*x^2 + 12*x - 8 };
+    \addplot [teal,smooth,thick,samples=200] { 
+      2*sin(deg(x))*cos(deg(x))
+    };
+    \legend{
+      První funkce,
+      Druhá funkce,
+      Třetí funkce
+    }
+  \end{axis}
+\end{tikzpicture}
+
+\section{Úloha 3}
+
+Protože extrémy jsou krajními body intervalů růstu a klesání, stačí se nám
+podívat na intervaly z druhé úlohy, abychom získali extrémy funkcí.
+
+U funkce \ref{eq:1} nám stačí určit, kdy její derivace, lineární funkce, 
+protíná osu $x$, a to v bodě $x = 2$. Neboť derivace je rostoucí, jedná
+se globální minimum.
+
+U funkce \ref{eq:2} můžeme chybně určit, že bod $x = 2$ bude extrémem,
+ale protože se jedná o dvojnásobný kořen její derivace a samotná funkce
+roste v $\mathbb{R}$, nemůže to být extrém. Tudíž funkce \ref{eq:2}
+nemá žádný extrém.
+
+A poněvadž je funkce \ref{eq:3} periodická, pokud bude mít globální
+maxima a minima, bude jich mít nekonečně mnoho, což musí mít, anžto
+existují intervaly, kdy roste a kdy klesá. Když se podíváme na 
+intervaly růstu a klesání dané funkce, zjistíme, že pro 
+$k \in \mathbb{Z}$ budou globální maxima $\frac{\pi}{4} + k\pi$ 
+a globální minima $\frac{3\pi}{4} + k\pi$.
+
+\end{document}

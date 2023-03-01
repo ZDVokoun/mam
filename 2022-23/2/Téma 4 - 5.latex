@@ -1,0 +1,26 @@
+\documentclass{fkssolpub}
+
+\usepackage[czech]{babel}
+\usepackage{fontspec}
+
+\usepackage{fkssugar}
+ 
+\author{Ondřej Sedláček}
+\school{Gymnázium Oty Pavla} 
+\series{2}
+\problem{4} 
+
+\begin{document} 
+
+\section{Úloha 5}
+
+Když si najdeme význam slov konvexní a konkávní, zjistíme, že konvexní znamená
+vypouklý (z latinského convexus) a konkávní vydutý (z latinského concavus). 
+To však může způsobit zmatky, protože tvar konvexní funkce na první pohled 
+vypadá vydutě a naopak u konkávní funkce vypoukle. Avšak tohle je čistě
+relevantní, a v tom je skryt ten význam. Konvexnost a konkávnost se neurčuje
+podle osy x, nýbrž podle \textit{tečny} v určitém bodě, tudíž je to pojmenované
+podle toho, jestli je funkce vůči tečně vypouklá (je nad ní) či vydutá
+(je pod ní).
+
+\end{document}

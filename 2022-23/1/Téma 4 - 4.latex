@@ -1,0 +1,162 @@
+\documentclass{fkssolpub}
+
+\usepackage[czech]{babel}
+\usepackage{fontspec}
+
+\usepackage{fkssugar}
+ 
+\author{Ondřej Sedláček}
+\school{Gymnázium Oty Pavla} 
+\series{1}
+\problem{4} 
+
+\begin{document} 
+
+Jako první budu derivovat tento výraz:
+\begin{equation}
+  5x^4-3x^2+\pi
+  \label{eq:1}
+\end{equation}
+
+Na tento výraz použijeme jenom vzorce pro součet a odčítání, 
+součin, konstantu a umocněné číslo:
+\[
+  (5x^4-3x^2+\pi)' = 5(x^4)' - 3(x^2)' = 20x^3 - 6x
+\]
+
+Jako další budu derivovat toto:
+\begin{equation}
+  \cos^2 x + \sin^2 x
+  \label{eq:2}
+\end{equation}
+
+Tady budeme sčítance derivovat samostatně. Začneme u prvního členu.
+
+Jedná se o složenou funkci kosinu a kvadratické funkce. Pro pohodlí
+je zde budu označovat následovně:
+\[
+  f(x) = x^2
+\]
+\[
+  g(x) = \cos x
+\]
+
+Pak je dosadíme a získáme derivaci prvního sčítance:
+\[
+  (f(g))' = f'(g) \times g' = -2 \sin \times \cos
+\]
+
+Druhý sčítanec zderivujeme podobně:
+\[
+  f(x) = x^2
+\]
+\[
+  g(x) = \sin x
+\]
+\[
+  (f(g))' = f'(g) \times g' = 2 \sin \times \cos
+\]
+
+Teď do výrazu \ref{eq:2} dosadíme tyto derivace:
+\[
+  (\cos^2 x + \sin^2 x)' = 2 \sin \times \cos - 2 \sin \times \cos = 0
+\]
+
+Další zderivujeme druhou odmocninu z x:
+\begin{equation}
+  \sqrt{x}
+  \label{eq:3}
+\end{equation}
+
+Druhá odmocnina je inverzní funkcí ke kvadratické rovnici $x^2$.
+Proto když označíme $f(x) = x^2$, můžeme ji zderivovat:
+\[
+  (f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))} = \frac{1}{2\sqrt{x}}
+\]
+
+Dále zderivujeme přirozenou exponenciální funkci:
+\begin{equation}
+  e^{-3x}
+  \label{eq:4}
+\end{equation}
+
+Jedná se o složenou funkci, proto označíme:
+\[
+  f(x) = e^x
+\]
+\[
+  g(x) = -3x
+\]
+
+Teď ji zderivujeme:
+\[
+  (f(g(x)))' = f'(g(x)) \times g'(x) = -3 \times e^{-3x}
+\]
+
+Jako další máme výraz v podílovém tvaru:
+\begin{equation}
+  \frac{3x^3 + 42x}{7x^2 + 2x}
+  \label{eq:5}
+\end{equation}
+
+Tento výraz nejprve zjednodušíme:
+\[
+  \frac{3x^3 + 42x}{7x^2 + 2x} = \frac{3x^2 + 42}{7x + 2}
+\]
+
+Pak její členy označíme jako:
+\[
+  f(x) = 3x^2 + 42
+\]
+\[
+  g(x) = 7x + 2
+\]
+
+A zderivujeme:
+\[
+  f'(x) = (3x^2 + 42)' = 3(x^2)' = 6x
+\]
+\[
+  g'(x) = (7x + 2)' = 7
+\]
+
+A pak můžeme derivovat:
+\[
+  \left(\frac{f}{g}\right)' = \frac{f'g - fg'}{g^2} = 
+  \frac{6x (7x + 2) - 7 (3x^2 + 42)}{(7x + 2)^2} =
+  \frac{42x^2 + 12x - 21x^2 - 296}{(7x + 2)^2} =
+  \frac{21x^2 + 12x - 296}{(7x + 2)^2} = 
+  \frac{3(7x^2 + 4x - 98)}{(7x + 2)^2}
+\]
+
+Teď musíme získat tvar bez derivací tohoto výrazu:
+\begin{equation}
+  (\sin(5x))''
+  \label{eq:6}
+\end{equation}
+
+Při první derivaci využijeme vzorec pro složené funkce
+a funkci sinus a při druhé ještě pro kosinus:
+\[
+  (\sin(5x))' = 5 \sin'(5x) = 5 \cos(5x)
+\]
+\[
+  (\sin(5x))'' = (5 \cos(5x))' = 5 (\cos(5x))' = -25 \sin(5x)
+\]
+
+A jako poslední nám zbývá tento výraz:
+\begin{equation}
+  \ln(\tan x)
+  \label{eq:7}
+\end{equation}
+
+Pro něj využijeme vzorce pro přirozený logaritmus a tangens
+z článku a pro složenou funkci:
+\[
+  (\ln(\tan x))' = \ln'(\tan x) \times \tan' x = 
+  \frac{1}{\tan x} \times \frac{1}{\cos^2 x} = 
+  \frac{1}{\tan x \times \cos^2 x}
+\]
+
+
+\end{document}
