@@ -4,9 +4,6 @@
 [submodule "2022-23/3/Téma 3/ElevatorSimulator"]
 	path = 2022-23/3/Téma 3/ElevatorSimulator
 	url = https://github.com/bsaid/ElevatorSimulator.git
-[submodule "2022-23/2/Téma 3/--force"]
-	path = 2022-23/2/Téma 3/--force
-	url = https://github.com/bsaid/ElevatorSimulator.git
 [submodule "2022-23/2/Téma 3/ElevatorSimulator"]
 	path = 2022-23/2/Téma 3/ElevatorSimulator
 	url = https://github.com/bsaid/ElevatorSimulator.git
