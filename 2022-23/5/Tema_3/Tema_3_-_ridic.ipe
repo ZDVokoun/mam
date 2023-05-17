@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70218" creator="Ipe 7.2.26">
-<info created="D:20230314122604" modified="D:20230508204805"/>
+<info created="D:20230314122604" modified="D:20230514153839"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -313,54 +313,62 @@ h
 <page>
 <layer name="alpha"/>
 <view layers="alpha" active="alpha"/>
-<path layer="alpha" stroke="black" pen="fat">
+<path layer="alpha" matrix="1 0 0 1 0 -48" stroke="black" pen="fat">
 48 0 0 48 128 736 e
 </path>
-<path stroke="black" pen="fat">
+<path matrix="1 0 0 1 0 -48" stroke="black" pen="fat">
 48 0 0 48 448 736 e
 </path>
-<path matrix="1 0 0 1 160 -192" stroke="black" pen="fat">
+<path matrix="1 0 0 1 160 -240" stroke="black" pen="fat">
 48 0 0 48 128 736 e
 </path>
-<text transformations="translations" pos="128 736" stroke="black" type="label" width="35.7" height="6.926" depth="1.93" halign="center" valign="baseline">výtah A</text>
-<text matrix="1 0 0 1 320 0" transformations="translations" pos="128 736" stroke="black" type="label" width="35.284" height="6.926" depth="1.93" halign="center" valign="baseline">výtah B</text>
-<text matrix="1 0 0 1 160 -192" transformations="translations" pos="128 736" stroke="black" type="label" width="35.423" height="6.926" depth="1.93" halign="center" valign="baseline">výtah C</text>
-<path stroke="black" pen="fat" arrow="normal/normal">
+<text matrix="1 0 0 1 0 -48" transformations="translations" pos="128 736" stroke="black" type="label" width="35.7" height="6.926" depth="1.93" halign="center" valign="baseline">výtah A</text>
+<text matrix="1 0 0 1 320 -48" transformations="translations" pos="128 736" stroke="black" type="label" width="35.284" height="6.926" depth="1.93" halign="center" valign="baseline">výtah B</text>
+<text matrix="1 0 0 1 160 -240" transformations="translations" pos="128 736" stroke="black" type="label" width="35.423" height="6.926" depth="1.93" halign="center" valign="baseline">výtah C</text>
+<path matrix="1 0 0 1 0 -48" stroke="black" pen="fat" arrow="normal/normal">
 113.028 781.897 m
 31.2522 0 0 31.2522 84.2707 794.134 86.6227 762.971 a
 </path>
-<path stroke="black" pen="fat" arrow="normal/normal">
+<path matrix="1 0 0 1 0 -48" stroke="black" pen="fat" arrow="normal/normal">
 489.315 760.483 m
 31.3001 0 0 31.3001 486.867 791.687 456.819 782.923 a
 </path>
-<path stroke="black" pen="fat" arrow="normal/normal">
+<path matrix="1 0 0 1 0 -48" stroke="black" pen="fat" arrow="normal/normal">
 262.319 502.282 m
 34.3127 0 0 34.3127 288.628 480.256 314.638 502.636 a
 </path>
-<path stroke="black" pen="fat" arrow="normal/normal">
+<path matrix="1 0 0 1 0 -48" stroke="black" pen="fat" arrow="normal/normal">
 133.219 687.673 m
 153.579 0 0 153.579 286.793 688.896 238.973 542.952 a
 </path>
-<path stroke="black" pen="fat" arrow="normal/normal">
+<path matrix="1 0 0 1 0 -48" stroke="black" pen="fat" arrow="normal/normal">
 337.576 545.112 m
 150.93 0 0 150.93 288.016 687.673 438.946 687.673 a
 </path>
-<path stroke="black" pen="fat" arrow="normal/normal">
+<path matrix="1 0 0 1 0 -48" stroke="black" pen="fat" arrow="normal/normal">
 411.61 769.049 m
 202.308 0 0 202.308 287.404 609.356 163.199 769.049 a
 </path>
-<path stroke="black" pen="fat" arrow="normal/normal">
+<path matrix="1 0 0 1 0 -48" stroke="black" pen="fat" arrow="normal/normal">
 177.272 733.561 m
 241.913 0 0 241.913 288.628 948.32 399.517 733.319 a
 </path>
-<path stroke="black" pen="fat" arrow="normal/normal">
+<path matrix="1 0 0 1 0 -48" stroke="black" pen="fat" arrow="normal/normal">
 261.707 584.27 m
 190.875 0 0 190.875 78.764 529.816 162.129 701.523 a
 </path>
-<path stroke="black" pen="fat" arrow="normal/normal">
+<path matrix="1 0 0 1 0 -48" stroke="black" pen="fat" arrow="normal/normal">
 414.057 701.133 m
 177.04 0 0 177.04 494.209 543.276 320.875 579.31 a
 </path>
-<text matrix="0.996193 0 0 1.08834 67.4794 -73.4149" transformations="translations" pos="218.877 824.115" stroke="black" type="minipage" width="156.125" height="12.891" depth="7.92" halign="center" valign="center">jedním z pater k navštívení je -1 nebo výtah A má nejmenší vytížení</text>
+<text matrix="0.996193 0 0 1.08834 83.4794 -105.415" transformations="translations" pos="218.877 824.115" stroke="black" type="minipage" width="188.125" height="18.866" depth="13.9" halign="center" valign="center">jedním z pater k navštívení je -1 nebo výtah A má nejmenší vytížení / pošli signál do výtahu A </text>
+<text matrix="0.996193 0 0 1.08834 -124.521 -105.415" transformations="translations" pos="218.877 824.115" stroke="black" type="minipage" width="188.125" height="18.866" depth="13.9" halign="center" valign="center">jedním z pater k navštívení je -1 nebo výtah A má nejmenší vytížení / pošli signál do výtahu A</text>
+<text matrix="0.996193 0 0 1.08834 -108.521 -377.415" transformations="translations" pos="218.877 824.115" stroke="black" type="minipage" width="188.125" height="18.866" depth="13.9" halign="center" valign="center">jedním z pater k navštívení je 3 nebo výtah C má nejmenší vytížení / pošli signál do výtahu C</text>
+<text matrix="0.996193 0 0 1.08834 67.479 -521.415" transformations="translations" pos="218.877 824.115" stroke="black" type="minipage" width="188.125" height="18.866" depth="13.9" halign="center" valign="center">jedním z pater k navštívení je 3 nebo výtah C má nejmenší vytížení / pošli signál do výtahu C</text>
+<text matrix="0.200524 0.975803 -1.06606 0.219072 1056.19 221.381" transformations="translations" pos="218.877 824.115" stroke="black" type="minipage" width="156.125" height="19.139" depth="14.18" halign="center" valign="center">jedním z pater k navštívení je -1 nebo výtah A má nejmenší vytížení / pošli signál do výtahu A</text>
+<text matrix="0.368667 -0.925465 1.01107 0.402769 -564.434 462.588" transformations="translations" pos="218.877 824.115" stroke="black" type="minipage" width="156.125" height="19.139" depth="14.18" halign="center" valign="baseline">jedním z pater k navštívení je 3 nebo výtah C má nejmenší vytížení / pošli signál do výtahu C</text>
+<text matrix="0.996193 0 0 1.08834 259.479 -361.415" transformations="translations" pos="218.877 824.115" stroke="black" type="minipage" width="124.125" height="18.866" depth="13.9" halign="center" valign="center">výtah B má nejmenší vytížení / pošli signál do výtahu B</text>
+<text matrix="0.996193 0 0 1.08834 323.479 -121.415" transformations="translations" pos="218.877 824.115" stroke="black" type="minipage" width="124.125" height="18.866" depth="13.9" halign="center" valign="center">výtah B má nejmenší vytížení / pošli signál do výtahu B</text>
+<text matrix="0.996193 0 0 1.08834 67.479 -217.415" transformations="translations" pos="218.877 824.115" stroke="black" type="minipage" width="124.125" height="18.866" depth="13.9" halign="center" valign="center">výtah B má nejmenší vytížení / pošli signál do výtahu B</text>
 </page>
 </ipe>
