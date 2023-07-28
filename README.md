@@ -1,3 +1,61 @@
-# M&amp;M
+# M&amp;M 2022/23
 Toto je moje řešení korespondenčního semináře M&amp;M pořádaný MFF UK.
+
+## Bodování
+-	Téma 4: Derivace a integrály, díl 1, úloha 4	- počet bodů: 	7
+-	Téma 4: Derivace a integrály, díl 1, úloha 1	- počet bodů: 	1
+-	Téma 4: Derivace a integrály, díl 1, úloha 2	- počet bodů: 	1
+-	Téma 4: Derivace a integrály, díl 1, problém 3	- počet bodů: 	2
+-	Téma 2: Akustika, díl 1, úloha 3	- počet bodů: 	1
+-	Téma 2: Akustika, díl 1, úloha 4	- počet bodů: 	2
+-	Téma 2: Akustika, díl 1, problém 2	- počet bodů: 	0,5
+-	Téma 2: Akustika, díl 1, úloha 1	- počet bodů: 	6,5
+-	Téma 1: Matematické pohádky, díl 1, úloha 1	- počet bodů: 	0
+-	Téma 1: Matematické pohádky, díl 1, úloha 2	- počet bodů: 	2
+-	Téma 1: Matematické pohádky, díl 1, úloha 3	- počet bodů: 	1
+-	Téma 1: Matematické pohádky, díl 1, úloha 4	- počet bodů: 	2
+-	Téma 1: Matematické pohádky, díl 1, úloha 5	- počet bodů: 	1
+-	Téma 1: Matematické pohádky, díl 1, úloha 6	- počet bodů: 	1
+-	Téma 3: Výtahy, díl 1, problém 1	- počet bodů: 	0,2
+-	Téma 3: Výtahy, díl 1, problém 2	- počet bodů: 	2
+-	Téma 3: Výtahy, díl 1, úloha 3	- počet bodů: 	3
+-	Téma 3: Výtahy, díl 1, úloha 5	- počet bodů: 	2
+-	Téma 3: Výtahy, díl 2, úloha 1	- počet bodů: 	2
+-	Téma 3: Výtahy, díl 2, úloha 2	- počet bodů: 	1,5
+-	Téma 3: Výtahy, díl 2, úloha 3	- počet bodů: 	0
+-	Téma 4: Derivace a integrály, díl 2, úloha 1	- počet bodů: 	3
+-	Téma 4: Derivace a integrály, díl 2, úloha 2	- počet bodů: 	3
+-	Téma 4: Derivace a integrály, díl 2, úloha 3	- počet bodů: 	3
+-	Téma 3: Výtahy, díl 2, úloha 3	- počet bodů: 	5
+-	Téma 3: Výtahy, díl 2, úloha 4	- počet bodů: 	3
+-	Téma 4: Derivace a integrály, díl 2, problém 4	- počet bodů: 	11
+-	Téma 4: Derivace a integrály, díl 2, úloha 5	- počet bodů: 	1
+-	Téma 2: Akustika, díl 2, úloha 1	- počet bodů: 	2
+-	Téma 2: Akustika, díl 2, úloha 2	- počet bodů: 	1
+-	Téma 2: Akustika, díl 2, problém 3	- počet bodů: 	4
+-	Téma 2: Akustika, díl 2, problém 4	- počet bodů: 	5
+-	Téma 3: Výtahy, díl 3, úloha 2	- počet bodů: 	2
+-	Téma 3: Výtahy, díl 3, úloha 5	- počet bodů: 	2
+-	Téma 3: Výtahy, díl 3, úloha 3	- počet bodů: 	3
+-	Téma 3: Výtahy, díl 3, problém 4	- počet bodů: 	1,5
+-	Téma 3: Výtahy, díl 3, problém 6	- počet bodů: 	2
+-	Téma 3: Výtahy, díl 3, úloha 1	- počet bodů: 	1,1
+-	Téma 4: Derivace a integrály, díl 3, úloha 3	- počet bodů: 	5
+-	Téma 4: Derivace a integrály, díl 3, úloha 1	- počet bodů: 	3
+-	Téma 4: Derivace a integrály, díl 3, úloha 2	- počet bodů: 	5
+-	Téma 2: Akustika, díl 3, úloha 2	- počet bodů: 	4
+-	Téma 2: Akustika, díl 3, problém 4	- počet bodů: 	4
+-	Téma 4: Derivace a integrály, díl 4, úloha 6	- počet bodů: 	2
+-	Téma 4: Derivace a integrály, díl 4, úloha 1	- počet bodů: 	6
+-	Téma 4: Derivace a integrály, díl 4, úloha 2	- počet bodů: 	3,2
+-	Téma 4: Derivace a integrály, díl 4, úloha 3	- počet bodů: 	2
+-	Téma 4: Derivace a integrály, díl 4, úloha 4	- počet bodů: 	4
+-	Téma 3: Výtahy, díl 4, úloha 1	- počet bodů: 	1,5
+-	Téma 3: Výtahy, díl 4, problém 2	- počet bodů: 	1
+-	Téma 2: Akustika, díl 4, problém 1	- počet bodů: 	7
+-	Téma 3: Výtahy, díl 4, úloha 3	- počet bodů: 	11,5
+-	Téma 4: Derivace a integrály, díl 5, úloha 1	- počet bodů: 	2
+-	Téma 4: Derivace a integrály, díl 5, úloha 2	- počet bodů: 	1
+-	Téma 4: Derivace a integrály, díl 5, úloha 3	- počet bodů: 	2
+-	Téma 3: Výtahy, díl 5, úloha 1	- počet bodů: 	11
 
